@@ -36,7 +36,7 @@ public class ReservationRepository {
         return ReservationMapper.toReservation(reservationEntity, reservationTimeEntity);
     }
 
-    public void delete(Long id) {
+    public void deleteById(Long id) {
         int deletedCount = reservationDao.deleteById(id);
 
         if (deletedCount == 0) {

@@ -52,7 +52,7 @@ public class ReservationTimeDao {
         return jdbcTemplate.query(sql, reservationTimeRowMapper);
     }
 
-    public int delete(Long id) {
+    public int deleteById(Long id) {
         String sql = "delete from reservation_time where id = ?;";
         return jdbcTemplate.update(sql, id);
     }

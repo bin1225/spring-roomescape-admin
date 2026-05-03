@@ -28,7 +28,7 @@ public class ReservationTimeRepository {
     }
 
     public void deleteById(Long id) {
-        int deletedCount = reservationTimeDao.delete(id);
+        int deletedCount = reservationTimeDao.deleteById(id);
 
         if (deletedCount == 0) {
             throw new IllegalArgumentException("존재하지 않는 ID입니다");
